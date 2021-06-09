@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>LoRa&reg;/LoRaWAN&reg;</title>
+
+	<link rel="stylesheet" href="revealjs/dist/reset.css">
+	<link rel="stylesheet" href="revealjs/dist/reveal.css">
+	<link rel="stylesheet" href="revealjs/dist/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+	<style>
+		div.footer {
+			margin-top: 600px;
+			font-size: 20px;
+		}
+
+		.reveal h1,
+		.reveal h2,
+		.reveal h3,
+		.reveal h4,
+		.reveal h5 {
+			text-transform: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- ----- -->
+			<!-- Beginning of slides -->
+			<section>
+				<section data-background-color="#FFFFFF">
+					<h2>A crash course in LoRaWAN&reg;</h2>
+					<p>Diego Sandoval</p>
+					<p>2021</p>
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown data-background-color="#DAA520">
+					<textarea data-template>
+						## LoRa&reg;  and LoRAWAN&reg;
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Links 
+						* [Modulation](https://www.youtube.com/watch?v=dxYY097QNs0)
+						* [Gonzalos's presentation](https://speakerdeck.com/gonzalocasas/the-road-to-open-networks)
+						* [What are LoRa and LoRaWAN?](https://lora-developers.semtech.com/library/tech-papers-and-guides/lora-and-lorawan/)
+						* [What is LoRaWan?](https://reference.digilentinc.com/reference/programmable-logic/pynq-z1/reference-manual)
+						* [LoRa Alliance&reg;](https://lora-alliance.org/)
+                    </textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Difference between LoRa and LoRaWAN
+						<img data-src="https://lora-developers.semtech.com/uploads/documents/images/Technology_stack.png">
+
+						Note:
+
+						LoRaWAN specification, industry standard
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## LoRa Chips
+
+						<img height="190" data-src="https://www.semtech.com/uploads/products/SX1276.jpg">
+						<img height="160" data-src="https://www.semtech.com/uploads/products/SEMTECH-SX1301.jpg">
+						<img height="200" data-src="https://www.semtech.com/uploads/products/LoRa-Edge-LR1110.jpg">
+
+						Note:
+
+						LoRaWAN specification, industry standard
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## Wireless technologies
+					<img data-src="images/wireless.png" height="300">
+
+					* $\uparrow R$: long range
+					* $\uparrow B$: high bandwidth
+					* $\downarrow C$: low power consumption (cost)
+				</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						## (Typical) LoRaWAN network implementation
+
+						<img data-src="https://lora-developers.semtech.com/uploads/documents/images/Typical_Network.png">
+
+						[Source: Semtech](https://lora-developers.semtech.com/library/tech-papers-and-guides/lora-and-lorawan/)
+
+						Note:
+
+						Device classes
+
+						1-gateway 1000's of devices
+
+					</textarea>
+				</section>
+
+				<section data-background-image="images/lorawan_network0.png" data-background-size="contain"
+					data-markdown data-transition="fade">
+					<textarea data-template>
+					<br></br>
+					<br></br>
+					[Source: TTN](www.thethingsnetwork.org)
+				</textarea>
+				</section>
+
+				<section data-background-image="images/lorawan_network1.png" data-background-size="contain"
+					data-markdown data-transition="fade">
+				</section>
+
+				<section data-background-image="images/lorawan_network2.png" data-background-size="contain"
+					data-markdown data-transition="fade">
+					<textarea data-template>
+					## Infrastructure ownership
+					* Infrastructure as a service: operator
+					* Private network
+					* Open-source: owned by the community
+					* A hybrid model
+				</textarea>
+				</section>
+
+				<section data-markdown data-background-image="images/ttn-map-1.png" data-background-size="contain">
+					<textarea data-template>
+
+						<br></br>
+						<br></br>
+						<br></br>
+						<br></br>
+						<br></br>
+						[TTN map](https://www.thethingsnetwork.org/map)
+					</textarea>
+				</section>
+
+				<section data-background-color="#000000" data-background-image="images/coffee.jpg">
+					<h1>?</h1>
+				</section>
+
+
+
+			</section>
+
+			<section>
+				<section data-markdown data-background-color="#F4A460">
+					<textarea data-template>
+						## Getting started with LoRaWAN
+					</textarea>
+				</section>
+
+				<section data-background-image="images/lorawan_network1.png" data-background-size="contain"
+					data-markdown data-transition="fade">
+				</section>
+
+				<section data-markdown data-background-image="images/lorawan_network2.png"
+					data-background-size="contain">
+					<textarea data-template>
+						## Demo
+
+						<img data-src="images/starting_with_lorawan.png">
+
+						- [B-L072Z-LRWAN1 STM32L0 Discovery kit](https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html#)
+						- [Mini Hub](https://lora-alliance.org/lora_products/mini-hub-wall-plug-gateway/) ([basicstation](https://github.com/lorabasics/basicstation))
+
+						Note:
+
+						Tranceiver, modem
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## End device: [B-L072Z-LRWAN1](https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html#)
+
+						<img data-src="images/radio.png" height="400">
+
+						[Source: st.com](https://www.st.com/resource/en/user_manual/dm00329995-discovery-kit-for-lorawan-sigfox-and-lpwan-protocols-with-stm32l0-stmicroelectronics.pdf)
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## End device: [basicmac programming model](https://doc.sm.tc/mac/programming.html)
+
+						<img data-src="https://doc.sm.tc/mac/_images/lmic-arch.svg">
+
+						Note:
+
+						OS and device
+
+						100ks devices
+
+						history
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown data-background-color="#000000">
+					<textarea data-template>
+						## It's console time ...
+					</textarea>
+				</section>
+
+				<section data-markdown data-background-color="#000000">
+					<textarea data-template>
+						## End device: [basicmac.io](https://basicmac.io)
+						[Getting started](https://basicmac.io/guide/gettingstarted.html)
+				
+						<pre>
+							<code data-trim data-noescape console>
+								# clone the repository including submodules
+								git clone --recurse-submodules https://github.com/mkuyper/basicmac.git basicmac
+
+								cd basicmac
+
+								# create a virtual environment and activate it
+								python -m  venv venv  # or virtualenv venv depending on the distro
+								source venv/bin/activate
+							
+								# install Python dependencies 
+								# can also be pip3 depending on the distro
+								pip install -r basicloader/requirements.txt
+								pip install -r ./requirements.txt
+								pip install pyyaml # an additional dependency
+							</code>
+						</pre>
+					</textarea>
+				</section>
+
+				<section data-markdown data-background-color="#000000">
+					<textarea data-template>
+						## End device: [basicmac.io](https://basicmac.io)
+						Compiling
+				
+						<pre>
+							<code data-trim data-noescape bash>
+								cd basicloader
+								VARIANT=eu868 make
+								cd ../projects/ex-join
+								VARIANT=eu868 make
+								make loadbl # bootloader
+								make load  # application
+							</code>
+						</pre>
+					</textarea>
+				</section>
+
+				<section data-markdown data-background-color="#000000">
+					<textarea data-template>
+						## End device: personalization
+
+						* Over the air activation
+
+							* *DevEUI* End device identifier
+							* *JoinEUI* Join-Server identifier
+							* *AppKey* Application Key
+				
+						<pre>
+							<code data-trim data-noescape bash>
+								minicom  -D /dev/ttyACM0  -b 2000000
+							</code>
+						</pre>
+
+						Note:
+
+						EEPROM
+					</textarea>
+				</section>
+
+				<section data-markdown data-background-image="images/minicom1-off.png" data-background-size="contain"
+					data-background-color="#000000">
+					<textarea data-template>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+
+						See [here](https://basicmac.io/guide/gettingstarted.html#personalization) how the personalization is done.
+
+					</textarea>
+				</section>
+
+				<section data-markdown data-background-color="#000000">
+					<textarea data-template>
+						## Application side
+
+						<img data-src="images/ttn-key.png" height="200">
+
+						<pre>
+							<code data-trim data-noescape bash>
+export LNS_KEY="NNSXS.TFEB74W7JUEQUK4..."
+
+mosquitto_sub -h eu1.cloud.thethings.network \
+-t 'v3/unal@ttn/devices/+/up' \
+-u "unal@ttn" \
+-F "%p" \
+-P ${LNS_KEY} |jq '.uplink_message.frm_payload | @base64d' 
+							</code>
+						</pre>
+					</textarea>
+				</section>
+
+				<section data-markdown data-background-color="#000000">
+					<textarea data-template>
+						## Simulating a temperature reading
+						#### Device side
+
+						<pre>
+							<code data-trim data-noescape c>
+								// projects/ex-join/main.c
+
+								static bool tx (lwm_txinfo* txinfo) {
+									txinfo->data[0] = rand() % 20 + 200;
+									txinfo->dlen = 1;
+									txinfo->port = 15;
+									txinfo->txcomplete = txc;
+									return true;
+								}
+							</code>
+						</pre>
+					</textarea>
+				</section>
+
+				<section data-markdown data-background-color="#000000">
+					<textarea data-template>
+						## Simulating a temperature reading
+						#### Application side
+
+						<pre>
+							<code data-trim data-noescape bash>
+
+mosquitto_sub -h eu1.cloud.thethings.network \
+-t 'v3/unal@ttn/devices/+/up' \
+-u "unal@ttn" -P $LNS_KEY  \
+-F "%p"  |jq '.uplink_message.frm_payload' \
+-r --unbuffered \
+| awk '{cmd="base64 -d|od -t d2 -An"; print $0|cmd;close(cmd)};' \
+| ttyplot
+
+							</code>
+						</pre>
+					</textarea>
+				</section>
+				<section data-background-color="#000000" data-background-image="images/coffee.jpg">
+					<h1>?</h1>
+				</section>
+			</section>
+
+
+		</div>
+	</div>
+
+	<script src="revealjs/dist/reveal.js"></script>
+	<script src="revealjs/plugin/notes/notes.js"></script>
+	<script src="revealjs/plugin/markdown/markdown.js"></script>
+	<script src="revealjs/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			progress: false,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+	<script src="revealjs/plugin/math/math.js"></script>
+	<script>
+		Reveal.initialize({
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } },
+			},
+			plugins: [RevealMath]
+		});
+	</script>
+</body>
+
+</html>
